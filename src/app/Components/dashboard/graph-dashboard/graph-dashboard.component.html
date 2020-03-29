@@ -1,0 +1,54 @@
+<div class="container">
+  <clr-tabs>
+    <clr-tab>
+      <button clrTabLink id="link1">All</button>
+      <clr-tab-content id="content1" *clrIfActive>
+        <div class="chart-wrapper">
+          <canvas baseChart
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  [plugins]="lineChartPlugins">
+          </canvas>
+        </div>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>Confirmed</button>
+      <clr-tab-content *clrIfActive="true">
+        <div class="chart-wrapper">
+          <canvas baseChart
+                  [datasets]="confirmedData"
+                  [labels]="lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  [plugins]="lineChartPlugins">
+          </canvas>
+        </div>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>Today</button>
+      <clr-tab-content *clrIfActive="true">
+        <div class="chart-wrapper">
+          <canvas baseChart
+                  [datasets]="todayData"
+                  [labels]="lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  [plugins]="lineChartPlugins">
+          </canvas>
+        </div>
+      </clr-tab-content>
+    </clr-tab>
+  </clr-tabs>
+</div>
+
+

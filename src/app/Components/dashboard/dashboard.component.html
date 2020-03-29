@@ -1,0 +1,71 @@
+
+<clr-main-container>
+  <clr-header class="header header-6" [clr-nav-level]="1">
+    <div class="branding"><a routerlink="/" class="logo-and-title" href="/"><span>LEX</span><span class="title">COVID19</span></a></div>
+
+    <div class="header-nav clr-nav-level-1">
+      <a id="home-link" routerlink="/" routerlinkactive="active" class="nav-link active" href="/">
+        <span class="nav-text">Dashboard</span>
+      </a>
+      <a routerlink="/documentation" routerlinkactive="active" class="nav-link " href="/documentation">
+        <span class="nav-text">News</span>
+      </a><!----><!---->
+      <a routerlink="/icons" routerlinkactive="active" class="nav-link" href="/icons">
+        <span class="nav-text">Sources</span>
+      </a>
+      <a routerlink="/community" routerlinkactive="active" class="nav-link" href="/community">
+        <span class="nav-text">About</span>
+      </a>
+    </div>
+  </clr-header>
+
+  <div class="content-container">
+    <main class="content-area">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-block justify-content-center">
+
+              <span class="card-title"><h2 class="justify-content-center">1053</h2><span class="badge badge-purple">[+15]</span></span>
+
+            </div>
+            <div class="card-footer">
+              <h2 class="alert alert-danger justify-content-center">CONFIRMED</h2>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-block justify-content-center">
+
+              <span class="card-title"><h2 class="justify-content-center">1053</h2><span class="badge badge-purple">[+15]</span></span>
+
+            </div>
+            <div class="card-footer">
+              <h2 class="alert  justify-content-center">ACTIVE</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-block justify-content-center">
+
+              <span class="card-title"><h2 class="justify-content-center">1053</h2><span class="badge badge-purple">[+15]</span></span>
+
+            </div>
+            <div class="card-footer">
+              <h2 class="alert alert-success justify-content-center">RECOVERED</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-graph-dashboard></app-graph-dashboard>
+    </main>
+    <nav class="sidenav" [clr-nav-level]="2">
+      ...
+    </nav>
+  </div>
+</clr-main-container>
+
+
