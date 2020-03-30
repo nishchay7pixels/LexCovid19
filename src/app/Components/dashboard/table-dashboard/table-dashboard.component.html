@@ -1,0 +1,19 @@
+<clr-datagrid>
+  <clr-dg-column>State / UT</clr-dg-column>
+  <clr-dg-column>Confirmed</clr-dg-column>
+  <clr-dg-column>Active</clr-dg-column>
+  <clr-dg-column>Recovered</clr-dg-column>
+  <clr-dg-column>Deaths</clr-dg-column>
+  <clr-dg-column>Last Updated</clr-dg-column>
+
+  <clr-dg-row *ngFor="let state of stateData |slice:1">
+    <clr-dg-cell>{{state['state']}}</clr-dg-cell>
+    <clr-dg-cell>{{state['confirmed']}}</clr-dg-cell>
+    <clr-dg-cell>{{state['active']}}</clr-dg-cell>
+    <clr-dg-cell>{{state['recovered']}}</clr-dg-cell>
+    <clr-dg-cell>{{state['deaths']}}</clr-dg-cell>
+    <clr-dg-cell>{{state['lastupdatedtime']}}</clr-dg-cell>
+  </clr-dg-row >
+
+  <clr-dg-footer>...</clr-dg-footer>
+</clr-datagrid>
