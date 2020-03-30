@@ -8,12 +8,14 @@ import { GraphDashboardComponent } from './Components/dashboard/graph-dashboard/
 import {ChartsModule} from "ng2-charts";
 import {ClarityModule} from "@clr/angular";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { TableDashboardComponent } from './Components/dashboard/table-dashboard/table-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     GraphDashboardComponent,
+    TableDashboardComponent,
   ],
   //using ng2-charts
   imports: [

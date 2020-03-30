@@ -21,51 +21,69 @@
 
   <div class="content-container">
     <main class="content-area">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-block justify-content-center">
-
-              <span class="card-title"><h2 class="justify-content-center">1053</h2><span class="badge badge-purple">[+15]</span></span>
-
+      <!--<div class="flex-container">-->
+        <!--<div>-->
+          <!--<div class="level-item alert-danger"><h5>TOTAL</h5><h4>[+34]</h4><h1>1173 </h1></div>-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<div class="level-item alert-action"><h5>ACTIVE</h5><h4>[+34]</h4><h1>1173 </h1></div>-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<div class="level-item alert-dark"><h5>DEATHS</h5><h4>[+34]</h4><h1>1173 </h1></div>-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<div class="level-item alert-success"><h5>RECOVERED</h5><h4>[+34]</h4><h1>1173 </h1></div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card-counter primary">
+              <i class="fa fa-user-plus"></i>
+              <span class="count-numbers">12</span>
+              <span class="count-name">Today</span>
             </div>
-            <div class="card-footer">
-              <h2 class="alert alert-danger justify-content-center">CONFIRMED</h2>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card-counter danger">
+              <i class="fa fa-users"></i>
+              <span class="count-numbers">599</span>
+              <span class="count-name">Total Cases</span>
             </div>
           </div>
 
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-block justify-content-center">
-
-              <span class="card-title"><h2 class="justify-content-center">1053</h2><span class="badge badge-purple">[+15]</span></span>
-
-            </div>
-            <div class="card-footer">
-              <h2 class="alert  justify-content-center">ACTIVE</h2>
+          <div class="col-md-3">
+            <div class="card-counter success">
+              <i class="fa fa-life-saver"></i>
+              <span class="count-numbers">6875</span>
+              <span class="count-name">Recovered</span>
             </div>
           </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-block justify-content-center">
-
-              <span class="card-title"><h2 class="justify-content-center">1053</h2><span class="badge badge-purple">[+15]</span></span>
-
-            </div>
-            <div class="card-footer">
-              <h2 class="alert alert-success justify-content-center">RECOVERED</h2>
+          <div class="col-md-3">
+            <div class="card-counter info">
+              <i class="fa fa-user-times"></i>
+              <span class="count-numbers">35</span>
+              <span class="count-name">Deaths</span>
             </div>
           </div>
         </div>
       </div>
-      <app-graph-dashboard></app-graph-dashboard>
+
+      <div class="container">
+        <app-graph-dashboard></app-graph-dashboard>
+      </div>
+
+      <div class="container">
+        <app-table-dashboard></app-table-dashboard>
+      </div>
+
     </main>
     <nav class="sidenav" [clr-nav-level]="2">
       ...
     </nav>
   </div>
 </clr-main-container>
+
 
 

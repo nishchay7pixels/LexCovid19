@@ -15,5 +15,23 @@ export class ApiService {
   getIndiaCurveData(): Observable<any>{
       return this.http.get(url+'data.json');
   }
+
+  getStatesData(): any[]{
+    var statedata: any=[];
+    this.http.get(url+'data.json').subscribe(data => {
+      data['statewise'].forEach(item => {
+        statedata.push({
+          active: item['active'],
+          confirmed: item['confirmed'],
+          deaths: item['deaths'],
+          delta: item['delta'],
+          lastupdatedtime: item['lastupdatedtime'],
+          recovered: item['recovered'],
+          state: item['state']
+        })
+      })
+    });
+    return statedata;
+  }
 }
 

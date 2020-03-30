@@ -42,7 +42,7 @@ export class GraphDashboardComponent implements OnInit{
             totaldeceased:item['totaldeceased'],
             totalrecovered:item['totalrecovered']
           });
-          this.lineChartLabels.push(item['date']);
+          this.lineChartLabels.push(item['date'].split(" ")[0]);
           this.lineChartData[0].data.push(item['totalconfirmed']);
           this.lineChartData[1].data.push(item['totaldeceased']);
           this.lineChartData[2].data.push(item['totalrecovered']);
