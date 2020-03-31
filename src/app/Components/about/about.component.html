@@ -1,0 +1,53 @@
+
+<clr-main-container>
+  <clr-header class="header header-6" [clr-nav-level]="1">
+    <div class="branding"><a routerlink="/" class="logo-and-title" href="/"><span>LEX</span><span class="title">COVID19</span></a></div>
+
+    <div class="header-nav clr-nav-level-1">
+      <a id="home-link" routerlink="/" routerlinkactive="active" class="nav-link" href="/">
+        <span class="nav-text">Dashboard</span>
+      </a>
+      <a routerlink="/map" routerlinkactive="active" class="nav-link " href="/map">
+        <span class="nav-text">Map</span>
+      </a><!----><!---->
+      <a routerlink="/sources" routerlinkactive="active" class="nav-link" href="/sources">
+        <span class="nav-text">Sources</span>
+      </a>
+      <a routerlink="/about" routerlinkactive="active" class="nav-link active" href="/about">
+        <span class="nav-text">About</span>
+      </a>
+    </div>
+  </clr-header>
+
+  <div class="content-container">
+    <main class="content-area">
+
+
+      <div class="container">
+
+        <div id="github-card"
+             data-username="nishchay7pixels">
+        </div>
+      </div>
+
+
+
+    </main>
+
+    <clr-vertical-nav [clr-nav-level]="2">
+      <a clrVerticalNavLink href="https://www.mohfw.gov.in/coronvavirushelplinenumber.pdf" target="_blank" routerLinkActive="active">HELPLINE</a>
+      <a clrVerticalNavLink href="https://www.mohfw.gov.in/" target="_blank" routerLinkActive="active">MOHFW.GOV.IN</a>
+      <a clrVerticalNavLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank" routerLinkActive="active">WHO:COVID-19</a>
+      <a clrVerticalNavLink href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" target="_blank" routerLinkActive="active">CDC</a>
+      <a clrVerticalNavLink href="https://coronavirus.thebaselab.com/" target="_blank" routerLinkActive="active">GLOBAL TRACKER</a>
+      <div class="nav-divider"></div>
+      <a clrVerticalNavLink>Powered by LEEXPRO</a>
+    </clr-vertical-nav>
+
+  </div>
+</clr-main-container>
+
+
+
+
+

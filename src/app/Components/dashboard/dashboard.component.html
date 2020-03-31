@@ -7,13 +7,13 @@
       <a id="home-link" routerlink="/" routerlinkactive="active" class="nav-link active" href="/">
         <span class="nav-text">Dashboard</span>
       </a>
-      <a routerlink="/documentation" routerlinkactive="active" class="nav-link " href="/documentation">
-        <span class="nav-text">News</span>
+      <a routerlink="/map" routerlinkactive="active" class="nav-link " href="/map">
+        <span class="nav-text">Map</span>
       </a><!----><!---->
-      <a routerlink="/icons" routerlinkactive="active" class="nav-link" href="/icons">
+      <a routerlink="/sources" routerlinkactive="active" class="nav-link" href="/sources">
         <span class="nav-text">Sources</span>
       </a>
-      <a routerlink="/community" routerlinkactive="active" class="nav-link" href="/community">
+      <a routerlink="/about" routerlinkactive="active" class="nav-link" href="/about">
         <span class="nav-text">About</span>
       </a>
     </div>
@@ -21,6 +21,7 @@
 
   <div class="content-container">
     <main class="content-area">
+
       <!--<div class="flex-container">-->
         <!--<div>-->
           <!--<div class="level-item alert-danger"><h5>TOTAL</h5><h4>[+34]</h4><h1>1173 </h1></div>-->
@@ -37,10 +38,17 @@
       <!--</div>-->
       <div class="container">
         <div class="row">
+          <h1>COVID - 19 Tracker India</h1>
+        </div>
+
+        <div class="row">
+          Last updated at {{data['lastupdatedtime']}}
+        </div>
+        <div class="row">
           <div class="col-md-3">
             <div class="card-counter primary">
               <i class="fa fa-user-plus"></i>
-              <span class="count-numbers">12</span>
+              <span class="count-numbers">{{newUpdate['active']}}</span>
               <span class="count-name">Today</span>
             </div>
           </div>
@@ -48,7 +56,7 @@
           <div class="col-md-3">
             <div class="card-counter danger">
               <i class="fa fa-users"></i>
-              <span class="count-numbers">599</span>
+              <span class="count-numbers">{{data['confirmed']}}</span>
               <span class="count-name">Total Cases</span>
             </div>
           </div>
@@ -56,19 +64,20 @@
           <div class="col-md-3">
             <div class="card-counter success">
               <i class="fa fa-life-saver"></i>
-              <span class="count-numbers">6875</span>
+              <span class="count-numbers">{{data['recovered']}}</span>
               <span class="count-name">Recovered</span>
             </div>
           </div>
           <div class="col-md-3">
             <div class="card-counter info">
               <i class="fa fa-user-times"></i>
-              <span class="count-numbers">35</span>
+              <span class="count-numbers">{{data['deaths']}}</span>
               <span class="count-name">Deaths</span>
             </div>
           </div>
         </div>
       </div>
+
 
       <div class="container">
         <app-graph-dashboard></app-graph-dashboard>
@@ -79,11 +88,19 @@
       </div>
 
     </main>
-    <nav class="sidenav" [clr-nav-level]="2">
-      ...
-    </nav>
+    <clr-vertical-nav [clr-nav-level]="2">
+      <a clrVerticalNavLink href="https://www.mohfw.gov.in/coronvavirushelplinenumber.pdf" target="_blank" routerLinkActive="active">HELPLINE</a>
+      <a clrVerticalNavLink href="https://www.mohfw.gov.in/" target="_blank" routerLinkActive="active">MOHFW.GOV.IN</a>
+      <a clrVerticalNavLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank" routerLinkActive="active">WHO:COVID-19</a>
+      <a clrVerticalNavLink href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" target="_blank" routerLinkActive="active">CDC</a>
+      <a clrVerticalNavLink href="https://coronavirus.thebaselab.com/" target="_blank" routerLinkActive="active">GLOBAL TRACKER</a>
+      <div class="nav-divider"></div>
+      <a clrVerticalNavLink>Powered by LEEXPRO</a>
+    </clr-vertical-nav>
   </div>
 </clr-main-container>
+
+
 
 
 

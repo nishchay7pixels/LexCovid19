@@ -6,11 +6,16 @@ import {ApiService} from "../../Services/api.service";
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
   curve: any =[];
+
+  data: any;
+  newUpdate: any;
+
+
   constructor(private api: ApiService){
-   // this.getTotalCurve();
+   this.getTotalCurve();
   }
 
   getTotalCurve() {
@@ -27,12 +32,14 @@ export class DashboardComponent implements OnInit {
             totalrecovered:item['totalrecovered']
           });
         });
+        this.data = data['statewise'][0];
+        this.newUpdate = this.data['delta'];
+        console.log(this.data['delta']);
 
-      });
+        });
+
     //console.log(this.curve);
   }
-  ngOnInit(): void {
 
-  }
 
 }

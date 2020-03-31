@@ -1,19 +1,40 @@
-<clr-datagrid>
+<clr-datagrid >
   <clr-dg-column>State / UT</clr-dg-column>
   <clr-dg-column>Confirmed</clr-dg-column>
   <clr-dg-column>Active</clr-dg-column>
   <clr-dg-column>Recovered</clr-dg-column>
   <clr-dg-column>Deaths</clr-dg-column>
-  <clr-dg-column>Last Updated</clr-dg-column>
 
-  <clr-dg-row *ngFor="let state of stateData |slice:1">
+  <clr-dg-row *ngFor="let state of stateData |slice:1" [clrDgItem]="state" >
     <clr-dg-cell>{{state['state']}}</clr-dg-cell>
     <clr-dg-cell>{{state['confirmed']}}</clr-dg-cell>
     <clr-dg-cell>{{state['active']}}</clr-dg-cell>
     <clr-dg-cell>{{state['recovered']}}</clr-dg-cell>
     <clr-dg-cell>{{state['deaths']}}</clr-dg-cell>
-    <clr-dg-cell>{{state['lastupdatedtime']}}</clr-dg-cell>
+
   </clr-dg-row >
+  <clr-dg-detail *clrIfDetail="let detail">
+    <clr-dg-detail-header>{{detail['state']}}</clr-dg-detail-header>
+    <clr-dg-detail-body>
+      <-- Below is state data -->
+      <clr-datagrid>
+
+        <clr-dg-column>City</clr-dg-column>
+        <clr-dg-column>Active</clr-dg-column>
+        <clr-dg-column>Total</clr-dg-column>
+        <clr-dg-column>Death</clr-dg-column>
+        <clr-dg-column>Recovered</clr-dg-column>
+
+        <clr-dg-row >
+          <clr-dg-cell>Will</clr-dg-cell>
+          <clr-dg-cell>be</clr-dg-cell>
+          <clr-dg-cell>working</clr-dg-cell>
+          <clr-dg-cell>soon</clr-dg-cell>
+          <clr-dg-cell>guys!</clr-dg-cell>
+        </clr-dg-row>
+      </clr-datagrid>
+    </clr-dg-detail-body>
+  </clr-dg-detail>
 
   <clr-dg-footer>...</clr-dg-footer>
 </clr-datagrid>
