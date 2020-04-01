@@ -11,8 +11,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { TableDashboardComponent } from './Components/dashboard/table-dashboard/table-dashboard.component';
 import { MapComponent } from './Components/map/map.component';
 import { SourcesComponent } from './Components/sources/sources.component';
-import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+// import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import { AboutComponent } from './Components/about/about.component';
+import { GlobalDashboardComponent } from './Components/global-dashboard/global-dashboard.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AboutComponent } from './Components/about/about.component';
     MapComponent,
     SourcesComponent,
     AboutComponent,
+    GlobalDashboardComponent,
   ],
   //using ng2-charts
   imports: [
@@ -35,7 +37,8 @@ import { AboutComponent } from './Components/about/about.component';
     BrowserAnimationsModule,
 
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  // providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

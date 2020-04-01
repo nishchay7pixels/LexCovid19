@@ -1,5 +1,6 @@
 
 <clr-main-container>
+
   <clr-header class="header header-6" [clr-nav-level]="1">
     <div class="branding"><a routerlink="/" class="logo-and-title" href="/"><span>LEX</span><span class="title">COVID19</span></a></div>
 
@@ -7,8 +8,8 @@
       <a id="home-link" routerlink="/" routerlinkactive="active" class="nav-link active" href="/">
         <span class="nav-text">Dashboard</span>
       </a>
-      <a routerlink="/map" routerlinkactive="active" class="nav-link " href="/map">
-        <span class="nav-text">Map</span>
+      <a routerlink="/global" routerlinkactive="active" class="nav-link " href="/global">
+        <span class="nav-text">Global</span>
       </a><!----><!---->
       <a routerlink="/sources" routerlinkactive="active" class="nav-link" href="/sources">
         <span class="nav-text">Sources</span>
@@ -84,6 +85,7 @@
       </div>
 
       <div class="container">
+        <h4>State and Union Territories Data</h4>
         <app-table-dashboard></app-table-dashboard>
       </div>
 
@@ -95,7 +97,7 @@
       <a clrVerticalNavLink href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" target="_blank" routerLinkActive="active">CDC</a>
       <a clrVerticalNavLink href="https://coronavirus.thebaselab.com/" target="_blank" routerLinkActive="active">GLOBAL TRACKER</a>
       <div class="nav-divider"></div>
-      <a clrVerticalNavLink>Powered by LEEXPRO</a>
+      <a clrVerticalNavLink routerlink="/about" routerlinkactive="active" class="nav-link" href="/about">Developed by LEEXPRO</a>
     </clr-vertical-nav>
   </div>
 </clr-main-container>

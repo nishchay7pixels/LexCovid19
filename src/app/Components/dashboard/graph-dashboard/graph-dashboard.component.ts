@@ -81,7 +81,7 @@ export class GraphDashboardComponent implements OnInit{
     }
   ];
 
-  lineChartLegend = true;
+  lineChartLegend = false;
   lineChartPlugins = [];
   lineChartType = 'line';
 

@@ -4,6 +4,7 @@ import {Observable} from "rxjs/internal/Observable";
 import {map} from "rxjs/operators";
 
 const url = 'https://api.covid19india.org/';
+const world_data_url = 'https://raw.githubusercontent.com/pomber/covid19/master/docs/timeseries.json';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,10 @@ export class ApiService {
       })
     });
     return statedata;
+  }
+
+  getWorldData(): Observable<any>{
+    return this.http.get('https://raw.githubusercontent.com/pomber/covid19/master/docs/timeseries.json');
   }
 }
 

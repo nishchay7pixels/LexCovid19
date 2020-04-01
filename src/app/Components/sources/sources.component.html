@@ -7,8 +7,8 @@
       <a id="home-link" routerlink="/" routerlinkactive="active" class="nav-link" href="/">
         <span class="nav-text">Dashboard</span>
       </a>
-      <a routerlink="/map" routerlinkactive="active" class="nav-link" href="/map">
-        <span class="nav-text">Map</span>
+      <a routerlink="/global" routerlinkactive="active" class="nav-link" href="/global">
+        <span class="nav-text">Global</span>
       </a><!----><!---->
       <a routerlink="/sources" routerlinkactive="active" class="nav-link active" href="/sources">
         <span class="nav-text">Sources</span>
@@ -25,8 +25,17 @@
 
       <div class="container">
 
-        <h3>Will Be Updated Soon</h3>
+        <h3>API</h3>
+        <h5>1. <a href="https://api.covid19india.org/">https://api.covid19india.org/</a></h5>
+        <h5>2. <a href="https://github.com/pomber/covid19">https://github.com/pomber/covid19</a></h5>
       </div>
+      <clr-alert [clrAlertType]="'warning'">
+        <clr-alert-item>
+        <span class="alert-text">
+            The data displayed may vary from actual figures since the data is fetched using different APIs.
+        </span>
+        </clr-alert-item>
+      </clr-alert>
 
 
 
@@ -39,11 +48,13 @@
       <a clrVerticalNavLink href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" target="_blank" routerLinkActive="active">CDC</a>
       <a clrVerticalNavLink href="https://coronavirus.thebaselab.com/" target="_blank" routerLinkActive="active">GLOBAL TRACKER</a>
       <div class="nav-divider"></div>
-      <a clrVerticalNavLink>Powered by LEEXPRO</a>
+      <a clrVerticalNavLink routerlink="/about" routerlinkactive="active" class="nav-link" href="/about">Developed by LEEXPRO</a>
     </clr-vertical-nav>
 
   </div>
+
 </clr-main-container>
+
 
 
 
