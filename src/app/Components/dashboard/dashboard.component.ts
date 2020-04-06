@@ -13,6 +13,8 @@ export class DashboardComponent {
   data: any;
   newUpdate: any;
 
+  timestamp: any;
+
 
   constructor(private api: ApiService){
    this.getTotalCurve();
@@ -33,8 +35,9 @@ export class DashboardComponent {
           });
         });
         this.data = data['statewise'][0];
-        this.newUpdate = this.data['delta'];
-        console.log(this.data['delta']);
+        this.newUpdate = this.data;
+        this.timestamp = this.data['lastupdatedtime'];
+        console.log(this.timestamp);
 
         });
 
