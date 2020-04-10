@@ -1,6 +1,6 @@
 # Covid19
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.This is a dashboard to track COVID19 cases in India. The primary data source is collected by volunteers at covid19india.org, a crowdsourced database collated from various news as well as government sources. 
 
 ## Development server
 
